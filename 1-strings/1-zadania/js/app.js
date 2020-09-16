@@ -63,10 +63,10 @@ console.log(text3);
 // Korzystając z obiektu Math stwórz kilka losowych zmiennych z zakresu 10-100000. 
 // Możesz skorzystać ze wzoru Math.floor(Math.random()*(max-min+1)+min). 
 // Po wygenerowaniu wypisz je w konsoli tak, by wszystkie kończyły się w jednym rzędzie. 
-let min = 1;
+let min = 10;
 let max = 100000;
 tabr = [];
 for (let i = 0; i < 10; i++){
-  tabr[i] = Math.floor(Math.random()*(max-min+1)+min);
-  console.log(tabr[i].padStart(10, "x"));
+  tabr[i] = Math.floor(Math.random()*(max-min+1)+min).toString();
+  console.log(tabr[i].padStart(10, " "));
 }
