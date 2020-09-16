@@ -31,3 +31,28 @@ if(n > 0){
 Tekst w ramce powinien być postawiony pod zmienną, tak by łatwo można było go zmienić. 
 Narożniki wygeneruj po prostu kopiując odpowiednie znaki z powyższego przykładu. */
 
+let txt = "To jest jakiś tekst";
+let dlTekstu = txt.length;
+let lewyGorny = "╔";
+let prawyGorny = "╗";
+let lewyDolny = "╚";
+let prawyDolny = "╝";
+let poziom = "═";
+let pion = "║";
+
+let firstLine = lewyGorny;
+for(let i = 1;i < dlTekstu + 5; i++){
+  firstLine += poziom;
+}
+firstLine += prawyGorny;
+console.log(firstLine);
+  
+let secondLine = pion + "  " + txt + "  " + pion;
+console.log(secondLine);
+
+let thirdLine = lewyDolny;
+for(let i = 1;i < dlTekstu + 5; i++){
+  thirdLine += poziom;
+}
+thirdLine += prawyDolny;
+console.log(thirdLine);
