@@ -70,3 +70,17 @@ for (let i = 0; i < 10; i++){
   tabr[i] = Math.floor(Math.random()*(max-min+1)+min).toString();
   console.log(tabr[i].padStart(10, " "));
 }
+
+// Zadanie 6
+// Wygeneruj pod zmienną uniqueID tekst będący losowym ciągiem liter i cyfr o długości 20 znaków. Nie narzucam tutaj sposobu rozwiązania.
+let min = 48;
+let max = 126;
+tabr = [];
+let uniqueID = "";
+for (let i = 0; i < 20; i++){
+  tabx[i] = Math.floor(Math.random()*(max-min+1)+min);
+}
+for (let j in tabx){
+  uniqueID += String.fromCharCode(tabx[j]);
+}
+console.log(uniqueID);
