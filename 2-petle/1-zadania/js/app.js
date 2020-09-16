@@ -1,5 +1,11 @@
 // Zadanie 1
 // Za pomocą pętli wypisz w konsoli tekst 12345678910
+let x = "";
+for (let i = 1; i < 11; i++){
+  x += i;
+}
+console.log(x);
+// lub
 const tab1 = [];
 for (let i = 1; i < 11; i++){
   tab1[i] = i;
