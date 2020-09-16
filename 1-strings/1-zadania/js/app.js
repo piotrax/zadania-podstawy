@@ -84,3 +84,10 @@ for (let j in tabx){
   uniqueID += String.fromCharCode(tabx[j]);
 }
 console.log(uniqueID);
+
+// Zadanie 7
+// Stwórz zmienną x równą jakiejś wartości liczbowej. Następnie wypisz w konsoli tekst: Liczba x * x da w wyniku x*x
+// Gdzie w odpowiednie miejsca wstawisz zmienną x i wynik działania.
+let x = 7;
+console.log(`Liczba x równa się ${x}`);
+console.log(`Liczba x * x da w wyniku ${x*x}`);
