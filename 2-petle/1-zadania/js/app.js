@@ -28,4 +28,6 @@ if(n > 0){
 ╔═══════════════════════╗
 ║  To jest jakiś tekst  ║
 ╚═══════════════════════╝
-Tekst w ramce powinien być postawiony pod zmienną, tak by łatwo można było go zmienić. Narożniki wygeneruj po prostu kopiując odpowiedni znaki z powyższego przykładu. */
+Tekst w ramce powinien być postawiony pod zmienną, tak by łatwo można było go zmienić. 
+Narożniki wygeneruj po prostu kopiując odpowiednie znaki z powyższego przykładu. */
+
