@@ -39,3 +39,19 @@ if (text.includes("kot")) {
 } else {
     console.log("Zdanie nie zawiera słowo kot" );
 }
+
+//Zadanie 4
+
+console.log(text.toLowerCase());
+console.log(text.toUpperCase());
+
+let tab = [...text];
+console.log(tab.length);
+if(tab.length % 2 === 0){ // poprawnie działa tylko przy parzystej liczbie znaków w stringu
+  let text2 ="";
+  for(let i = 0; i < tab.length; i += 2){
+    text2 += tab[i].toUpperCase();
+    text2 += tab[i+1].toLowerCase();
+  }
+  console.log(text2);
+}
