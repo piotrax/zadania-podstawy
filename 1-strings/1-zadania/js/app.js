@@ -55,3 +55,18 @@ if(tab.length % 2 === 0){ // poprawnie działa tylko przy parzystej liczbie znak
   }
   console.log(text2);
 }
+
+let text3 = text.replace("Ala", "John");
+console.log(text3);
+
+// Zadanie 5
+// Korzystając z obiektu Math stwórz kilka losowych zmiennych z zakresu 10-100000. 
+// Możesz skorzystać ze wzoru Math.floor(Math.random()*(max-min+1)+min). 
+// Po wygenerowaniu wypisz je w konsoli tak, by wszystkie kończyły się w jednym rzędzie. 
+let min = 1;
+let max = 100000;
+tabr = [];
+for (let i = 0; i < 10; i++){
+  tabr[i] = Math.floor(Math.random()*(max-min+1)+min);
+  console.log(tabr[i].padStart(10, "x"));
+}
