@@ -29,3 +29,13 @@ for(let i in tab){
   name +=(tab[i]);
 }
 console.log(`Witaj ${name}`);
+
+//Zadanie 3
+
+const text = "Ala ma Dakota";
+
+if (text.includes("kot")) {
+    console.log("Zdanie zawiera słowo kot");
+} else {
+    console.log("Zdanie nie zawiera słowo kot" );
+}
