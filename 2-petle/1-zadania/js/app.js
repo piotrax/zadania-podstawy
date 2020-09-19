@@ -31,7 +31,7 @@ if(n > 0){
 Tekst w ramce powinien być postawiony pod zmienną, tak by łatwo można było go zmienić. 
 Narożniki wygeneruj po prostu kopiując odpowiednie znaki z powyższego przykładu. */
 
-let txt = "To jest jakiś tekst To jest jakiś tekst To jest jakiś tekst";
+let txt = prompt("Wpisz jakiś tekst");
 let dlTekstu = txt.length;
 let przedluzacz = 4;
 
