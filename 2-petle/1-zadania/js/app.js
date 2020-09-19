@@ -94,14 +94,23 @@ console.log(str);
 */
 const min = 1;
 const max = 1000;
-const x = parseInt(prompt(`Podaj liczbę z zakresu od ${min} do ${max}`));
-if(x < 1 || x > 1000){
-	console.log(`Liczba ${x} nie mieści się w żądanym zakresie`);
+const userNumber = parseInt(prompt(`Podaj liczbę z zakresu od ${min} do ${max}`));
+if(userNumber < 1 || userNumber > 1000){
+	console.log(`Liczba ${userNumber} nie mieści się w żądanym zakresie`);
 }
-else if(isNaN(x)){
+else if(isNaN(userNumber)){
 	console.log("To nie jest liczba");
 }
 else
 {
-	console.log(`Liczba ${x} mieści się w żądanym zakresie`);
+	console.log(`Liczba ${userNumber} mieści się w żądanym zakresie`);
+	let j = 0;
+	while(true){
+		j++;
+		let rand = Math.floor((Math.random() * max) + min);
+		if (rand === userNumber){
+			console.log(`Wykonało się ${j} iteracji aby wylosować liczbę równą tej, którą podałeś`);
+			break;
+		}
+	}
 }
