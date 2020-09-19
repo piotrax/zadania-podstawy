@@ -32,7 +32,7 @@ console.log(`Witaj ${name}`);
 
 //Zadanie 3
 
-const text = "Ala ma Dakota";
+let text = "Ala ma kota";
 
 if (text.includes("kot")) {
     console.log("Zdanie zawiera słowo kot");
@@ -43,21 +43,21 @@ if (text.includes("kot")) {
 //Zadanie 4
 
 console.log(text.toLowerCase());
-console.log(text.toUpperCase());
+text = text.toUpperCase();
+console.log(text);
 
 let tab = [...text];
 console.log(tab.length);
-if(tab.length % 2 === 0){ // poprawnie działa tylko przy parzystej liczbie znaków w stringu
-  let text2 ="";
-  for(let i = 0; i < tab.length; i += 2){
-    text2 += tab[i].toUpperCase();
-    text2 += tab[i+1].toLowerCase();
+let text2 ="";
+for(let i in tab){
+  if(i % 2 > 0){
+    text2 += tab[i].toLowerCase();
   }
-  console.log(text2);
+  else {
+    text2 += tab[i];
+  }
 }
-
-let text3 = text.replace("Ala", "John");
-console.log(text3);
+console.log(text2);
 
 // Zadanie 5
 // Korzystając z obiektu Math stwórz kilka losowych zmiennych z zakresu 10-100000. 
