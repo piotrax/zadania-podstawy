@@ -110,3 +110,23 @@ whatDo(imie, miesiac);
   input -> "Ania|Marcin|Bartek" output -> "Ania|Bartek|Marcin"
   Wywołaj tę funkcję przekazując do niej str z początku zadania
 */
+const str = "Ania|Marcin|Bartek|Piotr|Kuba|Beata|Agnieszka";
+
+function stringToArray(tekst, divSign){
+	const tab =	tekst.split(divSign);
+    tab.sort();
+    let outString = "";
+    for (let i in tab){
+    outString += tab[i] + divSign;
+    }
+	console.info(outString);
+}
+stringToArray(str, "|");
+
+// Zadanie 7
+/*Napisz 2 funkcje. Każda z nich niech przyjmuje tablicę imion.
+  Pierwsza funkcja niech zwraca nową tablicę, w której imiona są zapisane dużymi literami. Druga funkcja niech zwraca nową tablicę, w której imiona mają zmienną wielkość liter.
+  input -> ["Ania" , "Marcin" , "Bartek" , "Piotr"]
+  output1 -> ["ANIA" , "MARCIN" , "BARTEK" , "PIOTR"]
+  output2 -> ["AnIa" , "MaRcIn" , "BaRtEk" , "PiOtR"]
+*/
