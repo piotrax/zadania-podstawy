@@ -27,17 +27,20 @@ sumArray(myArr);
 let tekst = prompt("Wpisz dowolny tekst:");
 
 function funnyText(text){ 
-  if(text.length % 2 > 0){
-    text += " ";
-  }
+  text = text.toUpperCase();
   let tab = [...text];
   let outText = "";
-  for(let i = 0; i < tab.length; i += 2){
-      outText += tab[i].toUpperCase();
-      outText += tab[i+1].toLowerCase();
+  for(let i in tab){
+    if(i % 2 == 0){
+      outText += tab[i];
+    }
+    else {
+      outText += tab[i].toLowerCase();
+    }
   } 
   console.info(outText);
 }
+
 funnyText(tekst);
 
 // Zadanie 4
