@@ -77,11 +77,12 @@ console.log(thirdLine);
    01-2--3---4----5-----6------7-------
    Zadanie wykonaj dla zmiennej równej n=7
 */
+const n = 7;
 let str = "";
 let line = "-------";
-for(let n = 0; n <= 7; n++){
-	str += n;
-	str += line.slice(0, n);
+for(let i = 0; i <= n; i++){
+	str += i;
+	str += line.slice(0, i);
 }
 console.log(str);
 
@@ -91,3 +92,16 @@ console.log(str);
    const max = 1000;
    Za pomocą prompt() pobierz od użytkownika liczbę z przedziału min-max. Pamiętaj, że prompt() zwraca zawsze tekst, więc skonwertuj ją na liczbę.
 */
+const min = 1;
+const max = 1000;
+const x = parseInt(prompt(`Podaj liczbę z zakresu od ${min} do ${max}`));
+if(x < 1 || x > 1000){
+	console.log(`Liczba ${x} nie mieści się w żądanym zakresie`);
+}
+else if(isNaN(x)){
+	console.log("To nie jest liczba");
+}
+else
+{
+	console.log(`Liczba ${x} mieści się w żądanym zakresie`);
+}
