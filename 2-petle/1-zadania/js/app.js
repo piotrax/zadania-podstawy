@@ -84,3 +84,10 @@ for(let n = 0; n <= 7; n++){
 	str += line.slice(0, n);
 }
 console.log(str);
+
+// Zadanie 6
+/* Mamy dwie zmienne:
+   const min = 1;
+   const max = 1000;
+   Za pomocą prompt() pobierz od użytkownika liczbę z przedziału min-max. Pamiętaj, że prompt() zwraca zawsze tekst, więc skonwertuj ją na liczbę.
+*/
