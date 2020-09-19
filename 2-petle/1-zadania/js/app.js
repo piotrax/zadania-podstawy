@@ -71,3 +71,9 @@ for(let i = 0;i < newDlTekstu + przedluzacz; i++){
 }
 thirdLine += prawyDolny;
 console.log(thirdLine);
+
+// Zadanie 5
+/* Za pomocą pętli wygeneruj poniższy tekst:
+   01-2--3---4----5-----6------7-------
+   Zadanie wykonaj dla zmiennej równej n=7
+*/
