@@ -24,3 +24,23 @@ sumArray(myArr);
 
 // Zadanie 3
 // Napisz funkcję, która przyjmie dowolny tekst. Funkcja niech zwraca tekst, który ma zmiksowana wielkość liter np:
+let tekst = prompt("Wpisz dowolny tekst:");
+
+function funnyText(text){ 
+  if(text.length % 2 > 0){
+    text += " ";
+  }
+  let tab = [...text];
+  let outText = "";
+  for(let i = 0; i < tab.length; i += 2){
+      outText += tab[i].toUpperCase();
+      outText += tab[i+1].toLowerCase();
+  } 
+  console.info(outText);
+}
+funnyText(tekst);
+
+// Zadanie 4
+/* Napisz funkcję, która będzie wymagać 2 atrybutów. Funkcja niech sprawdza, czy oba atrybuty są liczbami.
+   Funkcja ma zwracać iloczyn (*) obu liczb. Jeżeli któryś z atrybutów nie jest liczbą, funkcja niech zwraca false.
+*/
