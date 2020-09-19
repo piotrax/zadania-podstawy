@@ -31,8 +31,20 @@ if(n > 0){
 Tekst w ramce powinien być postawiony pod zmienną, tak by łatwo można było go zmienić. 
 Narożniki wygeneruj po prostu kopiując odpowiednie znaki z powyższego przykładu. */
 
-let txt = "To jest jakiś tekst";
+let txt = "To jest jakiś tekst To jest jakiś tekst To jest jakiś tekst";
 let dlTekstu = txt.length;
+let przedluzacz = 4;
+
+if (dlTekstu > 20){
+	newDlTekstu = 20;
+	newTxt = txt.slice(0, 20) + "...";
+	przedluzacz = 7;
+}	else
+{
+	newDlTekstu = dlTekstu;
+	newTxt = txt;
+}
+
 let lewyGorny = "╔";
 let prawyGorny = "╗";
 let lewyDolny = "╚";
@@ -40,18 +52,21 @@ let prawyDolny = "╝";
 let poziom = "═";
 let pion = "║";
 
+//ramka górna
 let firstLine = lewyGorny;
-for(let i = 1;i < dlTekstu + 5; i++){
+for(let i = 0;i < newDlTekstu + przedluzacz; i++){
   firstLine += poziom;
 }
 firstLine += prawyGorny;
 console.log(firstLine);
-  
-let secondLine = pion + "  " + txt + "  " + pion;
+
+//ramka + tekst  
+let secondLine = pion + "  " + newTxt + "  " + pion;
 console.log(secondLine);
 
+//ramka dolna
 let thirdLine = lewyDolny;
-for(let i = 1;i < dlTekstu + 5; i++){
+for(let i = 0;i < newDlTekstu + przedluzacz; i++){
   thirdLine += poziom;
 }
 thirdLine += prawyDolny;
