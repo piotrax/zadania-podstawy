@@ -44,3 +44,30 @@ funnyText(tekst);
 /* Napisz funkcję, która będzie wymagać 2 atrybutów. Funkcja niech sprawdza, czy oba atrybuty są liczbami.
    Funkcja ma zwracać iloczyn (*) obu liczb. Jeżeli któryś z atrybutów nie jest liczbą, funkcja niech zwraca false.
 */
+let liczba1 = prompt("Podaj mnożną:");
+let liczba2 = prompt("Podaj mnożnik:");
+
+function pomnoz(num1, num2){
+	let mul = parseInt(num1) * parseInt(num2);
+	if(mul !== (num1 * num2)){
+		console.info("Co najmniej jeden z podanych czynników nie jest liczbą.");
+	}
+	else{
+		console.info(`Wynik mnożenia ${num1} i ${num2} wynosi ${mul}`);
+	}
+}
+pomnoz(liczba1, liczba2);
+
+// Zadanie 5
+/* Napisz funkcje, która przyjmuje 2 parametry:
+imię - np: Ala
+miesiac - np: styczen
+Funkcja ma zwracac:
+jezeli miesiac to grudzien, styczen, luty: "Ala jezdzi na sankach"
+jezeli miesiac to marzec, kwiecien, maj: "Ala chodzi po kaluzach"
+jezeli miesiac to czerwiec, lipiec, sierpien: "Ala sie opala"
+jezeli miesiac to wrzesien, pazdziernik, listopad: "Ala zbiera liscie"
+Wywołaj funkcje przekazując do niej zmienne: twoje imię i dowolny miesiąc.
+Dopisz w funkcji zabezpieczenie, które pozwoli wpisać miesiac małymi lub dużymi literami.
+Jeżeli miesiac jest "innym słowem", funkcja niech zwraca "Ala uczy się JS"
+*/
