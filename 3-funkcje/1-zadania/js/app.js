@@ -71,3 +71,42 @@ Wywołaj funkcje przekazując do niej zmienne: twoje imię i dowolny miesiąc.
 Dopisz w funkcji zabezpieczenie, które pozwoli wpisać miesiac małymi lub dużymi literami.
 Jeżeli miesiac jest "innym słowem", funkcja niech zwraca "Ala uczy się JS"
 */
+function whatDo(name, month){
+  let month1 = month.toLowerCase();
+  switch(month1) {
+    case "grudzien":
+	case "styczen":
+	case "luty":
+      console.info(`${name} jezdzi na sankach`);
+    break;
+    case "marzec":
+	case "kwiecien":
+	case "maj":
+      console.info(`${name} chodzi po kałużach`);
+    break;
+	case "wrzesien":
+	case "pazdziernik":
+	case "listopad":
+	  console.info(`${name} zbiera liście`);
+	break; 
+    default:
+    console.info(`${name} uczy się JS`);
+  }
+}
+const imie = prompt("Podaj swoje imię:");
+const miesiac = prompt("Podaj miesiąc:");
+whatDo(imie, miesiac);
+
+// Zadanie 6
+/*Mamy przykładowy tekst:
+  const str = "Ania|Marcin|Bartek|Piotr|Kuba|Beata|Agnieszka";
+  Napisz funkcję, która przyjmie 2 atrybuty:
+  tekst
+  znak rozdziału (np. |)
+  Skorzystaj z odpowiedniej metody, tak aby rozdzielić przekazany do funkcji tekst na części za pomocą przekazanego znaku rozdziału. 
+  W wyniku rozdzielenia powinieneś dostać tablicę. Funkcja niech posegreguje tą tablicę alfabetycznie. 
+  Następnie funkcja niech połączy tą tablicę w nowy tekst wstawiając między imiona znak wcześniejszego rozdziału. 
+  Skorzystaj tutaj z innej odpowiedniej metody js.
+  input -> "Ania|Marcin|Bartek" output -> "Ania|Bartek|Marcin"
+  Wywołaj tę funkcję przekazując do niej str z początku zadania
+*/
