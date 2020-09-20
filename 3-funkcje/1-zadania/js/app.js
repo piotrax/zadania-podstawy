@@ -146,13 +146,22 @@ function wielkieLitery(item){
 
 
 function funnyTab(item){
-for(let i = 0; i < item.length; i++){
-  output2[i] = funnyText(item[i]);
-}
-  } 
+  for(let i = 0; i < item.length; i++){
+    output2[i] = funnyText(item[i]);
+  }
+} 
 
 console.info(input);
 wielkieLitery(input);
 console.info(output1);
 funnyTab(input);
 console.info(output2);
+
+// Zadanie 8
+/*Napisz funkcję checkFemale, która sprawdza przekazane do niej imię.
+  Zróbmy proste teoretyczne założenie, że jeżeli imię kończy się literą "a" to jest to żeńskie imię, 
+  w przeciwnym wypadku męskie. Funkcja powinna wracać true jeżeli imię jest żeńskie i false jeżeli jest męskie. 
+  Przykładowo:
+  checkFemale("Ania") === true
+  checkFemale("Marcin") === false
+  */
