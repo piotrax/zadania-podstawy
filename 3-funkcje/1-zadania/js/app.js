@@ -39,6 +39,7 @@ function funnyText(text){
     }
   } 
   console.info(outText);
+  return outText;
 }
 
 funnyText(tekst);
@@ -133,3 +134,25 @@ stringToArray(str, "|");
   output1 -> ["ANIA" , "MARCIN" , "BARTEK" , "PIOTR"]
   output2 -> ["AnIa" , "MaRcIn" , "BaRtEk" , "PiOtR"]
 */
+const input = ["Ania" , "Marcin" , "Bartek" , "Piotr"];
+const output1 = [];
+const output2 = [];
+
+function wielkieLitery(item){
+  for(let i = 0; i < item.length; i++){
+    output1[i] = item[i].toUpperCase();
+  }
+}
+
+
+function funnyTab(item){
+for(let i = 0; i < item.length; i++){
+  output2[i] = funnyText(item[i]);
+}
+  } 
+
+console.info(input);
+wielkieLitery(input);
+console.info(output1);
+funnyTab(input);
+console.info(output2);
