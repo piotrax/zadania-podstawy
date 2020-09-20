@@ -175,3 +175,11 @@ console.info(output2);
   }
 
   checkFemale("Zuzanna");
+
+// Zadanie 9
+/*Napisz funkcję countWomanInTable(arr), do której przekażesz tablicę userów, którą masz poniżej. 
+Funkcja powinna sprawdzić każdego użytkownika w tablicy i zwrócić ile jest kobiet. 
+Wykorzystaj tutaj funkcję z poprzedniego zadania. Jak pobrać imię z usera? 
+Możesz to osiągnąć za pomocą metody split(). Podziel string na 2 części - uzyskasz tablicę 2 elementów. 
+Pierwszy to imię, drugi to nazwisko
+*/
