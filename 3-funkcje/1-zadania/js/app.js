@@ -165,3 +165,13 @@ console.info(output2);
   checkFemale("Ania") === true
   checkFemale("Marcin") === false
   */
+  function checkFemale(name){
+    if(name.substr(name.length - 1, 1) == "a"){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  checkFemale("Zuzanna");
