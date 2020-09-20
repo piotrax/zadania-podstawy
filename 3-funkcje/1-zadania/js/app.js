@@ -166,7 +166,7 @@ console.info(output2);
   checkFemale("Marcin") === false
   */
   function checkFemale(name){
-    if(name.substr(name.length - 1, 1) == "a"){
+    if(name.substr(name.length - 1, 1) === "a"){
       return true;
     }
     else {
