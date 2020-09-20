@@ -183,3 +183,31 @@ Wykorzystaj tutaj funkcję z poprzedniego zadania. Jak pobrać imię z usera?
 Możesz to osiągnąć za pomocą metody split(). Podziel string na 2 części - uzyskasz tablicę 2 elementów. 
 Pierwszy to imię, drugi to nazwisko
 */
+const users = [
+    "Ania Nowak",
+    "Piotr Kowalski",
+    "Bartek Kosecki",
+    "Natalia Nowak",
+    "Weronika Piotrowska",
+    "Agata Beatczak",
+    "Tomasz Nowak",
+    "Mateusz Kowalski",
+    "Marcin Kotecki",
+    "Beata Lecka",
+    "Katarzyna Melecka"
+]
+
+function countWomanInTable(arr){
+  let count = 0; 
+  let result = [];
+  for(let i = 0; i < arr.length; i++){
+    result[i] = arr[i].split(" ");
+  }
+  for(let j = 0; j < result.length; j++){
+    if(checkFemale(result[j][0])){
+      count++;
+    }
+  }
+  return count;
+}
+countWomanInTable(users);
