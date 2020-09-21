@@ -7,3 +7,15 @@ for(let user of users){
 
 // Zadanie 2
 // Wypisz tablicę z wszystkimi użytkownikami pełnoletnimi
+const adults = [];
+let i = 0;
+for(let user of users){
+  if(user.age >= 18){
+    adults[i] = user.name;
+    i++;
+  };
+}
+console.log(adults);
+
+// Zadanie 3
+// Wypisz tablicę z wszystkimi kobietami
