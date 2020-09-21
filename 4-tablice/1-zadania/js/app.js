@@ -24,3 +24,35 @@ hr();
 for(let i of tab1){
   console.info(`wyraz ${i} ma długość ${i.length}`);
 }
+
+// Zadanie 2
+/*Do tabeli z 1 zadania dodaj na końcu i początku po 1 nowym elemencie. 
+  Wykorzystaj odpowiednie metody. 
+  Po dodaniu elementów wypisz długość tablicy oraz całą tablicę za pomocą console.table()
+*/
+tab1.push("syrenka");
+tab1.unshift("bratek");
+console.table(tab1);
+
+// Zadanie 3
+// Usuń z tablicy 3 element ale tylko wtedy gdy ma ona tyle elementów.
+const del3Elem = tabName => {
+   if(tabName.length === 3){
+      tabName.pop();
+   }
+}
+
+hr();
+del3Elem(tab1)
+console.table(tab1);
+
+// Zadanie 4
+//Mamy tablicę:
+const names = [
+    "Marcin",
+    "Ania",
+    "Monika",
+    "Piotrek",
+    "Beata"
+]
+//Posortuj ją i wypisz w konsoli.
