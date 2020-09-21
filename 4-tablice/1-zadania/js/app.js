@@ -136,7 +136,7 @@ console.log(checkPalindrom("Anna"));
 //Zadanie 8
 // Napisz funkcję, która zwróci losową liczbę z przedziału min-max.
 function randInRange(min, max){
-  console.log(`${min}, ${max}`);
+  //console.log(`${min}, ${max}`);
   let result = Math.floor((Math.random() * max) + min);
   return result;
 }
@@ -148,4 +148,20 @@ console.log(`${x}`);
   w której będą losowe liczby z zakresu min-max. Do losowania liczb wykorzystaj funkcję 
   z poprzedniego zadania. Wynik odpalenia funkcji podstaw po zmienną, a następnie wypisz ją w konsoli. 
   Następnie wypisz w konsoli największą liczbę w tej tablicy.
+*/
+function generateRandomTable(min, max, count){
+  const tab = [];
+  for(let i = 0; i < count; i++){
+    tab[i] = randInRange(min, max);
+  }
+  return tab;
+}
+generateRandomTable(1,100,20);
+
+// Zadanie 10
+/* Stwórz funkcję monthName(nr), która będzie przyjmować tylko jeden 
+   atrybut - numer miesiąca. Funkcja powinna sprawdzić czy numer miesiąca
+   jest prawidłowy (1-12). Jeżeli tak jest powinna zwrócić nazwę miesiąca
+   w języku polskim. Wykorzystaj tutaj tablicę.
+   Dla przykładu: monthName(10) -> "październik"
 */
