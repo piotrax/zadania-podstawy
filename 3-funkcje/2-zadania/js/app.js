@@ -2,20 +2,20 @@
 /*
 Zamień na funkcje strzałkową poniższe funkcje:
 
-const sum = function(a, b) {
+const sum = (a, b) => {
     const result = a + b;
     console.log(result);
 }
 
-const myPow = function(a) {
+const myPow = a => {
     return Math.pow(a);
 }
 
-const hr = function() {
+const hr = () => {
     console.log("-------");
 }
 
-const bigWords = function(tab) {
+const bigWords = tab => {
     const result = [];
     for (let i=0; i<tab.length; i++) {
         result.push(tab[i].toUpperCase());
@@ -23,15 +23,14 @@ const bigWords = function(tab) {
     return result;
 }
 
-const sumTab = function(tab)  {
+const sumTab = tab =>  {
     const sum = 0;
     for (let i=0; i<tab.length; i++) {
         sum += tab[i];
     }
     return sum;
 }
-
-function test() {
+const test = () => {
     return "abecadło z pieca spadło";
 }
 
@@ -39,7 +38,7 @@ function test() {
     console.log("Prawie koniec");
 });
 
-function findFirst(arr, name) {
+const findFirst = (arr, name) => {
     let math = undefined;
     for (var i=0; i<arr.length; i++) {
         if (arr[i].name === name) {
