@@ -101,3 +101,37 @@ const tabUsers = [
 /* Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są pełnoletni.
    Dodatkowe - spróbuj zrobić to zadanie także za pomocą odpowiedniej do tego celu funkcji.
 */
+
+for(let i of tabUsers){
+  if(i.age >= 18){
+    console.info(i);
+  }
+}
+
+function adultOnly(tabX){
+   for(let i of tabX){
+      if(i.age >= 18){
+        console.info(i);
+    }
+  }
+}
+console.log("------------------------------");
+adultOnly(tabUsers);
+   
+// Zadanie 7
+// Napisz funkcję checkPalindrom(txt), która zwróci true/false w zależności od tego, czy przekazane słowo jest palindromem.
+function checkPalindrom(txt){
+  txt = txt.toLowerCase();
+  let txt2 = "";
+  for (let i = txt.length - 1; i > -1; i--) {
+    txt2 += txt[i];
+  }
+  if(txt === txt2){return true}
+  else{return false}
+}
+console.log(checkPalindrom("abecadło"));
+console.log(checkPalindrom("anna"));
+console.log(checkPalindrom("Anna"));
+
+//Zadanie 8
+// Napisz funkcję, która zwróci losową liczbę z przedziału min-max.
