@@ -19,3 +19,15 @@ console.log(adults);
 
 // Zadanie 3
 // Wypisz tablicę z wszystkimi kobietami
+const women = [];
+let i = 0;
+for(let user of users){
+  if(user.gender === "female"){
+    women[i] = user.name;
+    i++;
+  };
+}
+console.log(women);
+
+// Zadanie 4
+// Wypisz tablicę użytkowników którzy mają tag "dolor"
