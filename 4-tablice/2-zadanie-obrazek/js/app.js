@@ -17,3 +17,4 @@ for(let i = 0; i < tab.length; i++){
 }
 //tutaj wstawiamy do div wygenerowany html - nie ruszaj poniższej linijki
 document.querySelector('.canvas').innerHTML = text;
+// czy to miał być Super Mario?
