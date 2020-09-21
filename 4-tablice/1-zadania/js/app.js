@@ -73,3 +73,31 @@ const tab = [
   Na początku powinien być najkrótszy tekst, na końcu najdłuższy. 
   Następnie napisz, ile liter mają wszystkie elementy razem.
 */
+function compare(a, b) {
+    if (a.length < b.length) {
+        return -1
+    }
+    if (a.length > b.length) {
+        return 1
+    }
+    return 0
+}
+tab.sort(compare);
+console.table(tab);
+let x = 0;
+for(let i of tab){
+  x += i.length;
+}
+console.info(`ilość liter wszystkich elementów tablicy tab wynosi: ${x}`);
+
+// Zadanie 6
+// Mamy tablicę:
+const tabUsers = [
+    {name : "Marcin", age: 14},
+    {name : "Piotr", age: 18},
+    {name : "Agnieszka", age: 13},
+    {name : "Weronika", age: 20}
+]
+/* Za pomocą dowolnej pętli wypisz w konsoli imiona użytkowników, którzy są pełnoletni.
+   Dodatkowe - spróbuj zrobić to zadanie także za pomocą odpowiedniej do tego celu funkcji.
+*/
