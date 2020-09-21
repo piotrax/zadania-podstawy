@@ -7,8 +7,13 @@ const tab = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,3,3,3,3,3,0,0,0,0,0],[0,0,0,
 //START
 //-----------------------------------------
 let text = '';
-
-
-
+let pobranyKolor = '';
+for(let i = 0; i < tab.length; i++){
+  for(let j = 0; j < tab[i].length; j++){
+    pobranyKolor = colors[tab[i][j]];
+    text += '<div style="background:' + pobranyKolor + '"></div>';
+  }
+  text += '<br>';
+}
 //tutaj wstawiamy do div wygenerowany html - nie ruszaj poniższej linijki
 document.querySelector('.canvas').innerHTML = text;
