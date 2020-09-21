@@ -5,8 +5,7 @@
    Skorzystaj z pętli for, for of i forEach.
 */
 const tab1 = ["abażur", "bohater", "czarny", "dodekafonia", "elektroda"];
-console.info(`Pierwszy element tablicy ${tab1} to : ${tab1[0]}, natomiast ostatni element tej tablicy to: ${tab1[4]}`);
-const tab1 = ["abażur", "bohater", "czarny", "dodekafonia", "elektroda"];
+
 console.info(`Pierwszy element tablicy tab1 to: ${tab1[0]}, natomiast ostatni element tej tablicy to: ${tab1[4]}`);
 
 function hr(){
