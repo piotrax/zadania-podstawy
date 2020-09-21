@@ -56,3 +56,20 @@ const names = [
     "Beata"
 ]
 //Posortuj ją i wypisz w konsoli.
+names.sort();
+console.table(names);
+
+//Zadanie 5
+//Mamy tablicę:
+const tab = [
+    "xloremipsumdolor",
+    "kloremipsum",
+    "aloremipsumdol",
+    "blor",
+    "cloremipsu",
+    "gloremip",
+]
+/*Posortuj ją po długościach kolejnych elementów. 
+  Na początku powinien być najkrótszy tekst, na końcu najdłuższy. 
+  Następnie napisz, ile liter mają wszystkie elementy razem.
+*/
