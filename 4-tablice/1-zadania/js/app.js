@@ -135,3 +135,17 @@ console.log(checkPalindrom("Anna"));
 
 //Zadanie 8
 // Napisz funkcję, która zwróci losową liczbę z przedziału min-max.
+function randInRange(min, max){
+  console.log(`${min}, ${max}`);
+  let result = Math.floor((Math.random() * max) + min);
+  return result;
+}
+let x = randInRange(3, 33);
+console.log(`${x}`);
+
+//Zadanie 9
+/*Napisz funkcję generateRandomTable(min, max, count), która zwróci tablicę o długości count,
+  w której będą losowe liczby z zakresu min-max. Do losowania liczb wykorzystaj funkcję 
+  z poprzedniego zadania. Wynik odpalenia funkcji podstaw po zmienną, a następnie wypisz ją w konsoli. 
+  Następnie wypisz w konsoli największą liczbę w tej tablicy.
+*/
