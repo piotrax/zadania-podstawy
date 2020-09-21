@@ -165,3 +165,11 @@ generateRandomTable(1,100,20);
    w języku polskim. Wykorzystaj tutaj tablicę.
    Dla przykładu: monthName(10) -> "październik"
 */
+function monthName(nr){
+  const month = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"];
+  if(nr >= 1 && nr <= 12){
+    return month[nr - 1];
+  }
+  else return false;
+}
+console.log(monthName(10));
