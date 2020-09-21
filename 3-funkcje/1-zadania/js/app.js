@@ -135,20 +135,16 @@ stringToArray(str, "|");
   output2 -> ["AnIa" , "MaRcIn" , "BaRtEk" , "PiOtR"]
 */
 const input = ["Ania" , "Marcin" , "Bartek" , "Piotr"];
-const output1 = [];
-const output2 = [];
+let output1 = [];
+let output2 = [];
 
-function wielkieLitery(item){
-  for(let i = 0; i < item.length; i++){
-    output1[i] = item[i].toUpperCase();
-  }
+function wielkieLitery(tab){
+  output1 = tab.map(el => {return el.toUpperCase()});
 }
 
 
-function funnyTab(item){
-  for(let i = 0; i < item.length; i++){
-    output2[i] = funnyText(item[i]);
-  }
+function funnyTab(tab){
+  output2 = tab.map(el => {return funnyText(el)});
 } 
 
 console.info(input);
