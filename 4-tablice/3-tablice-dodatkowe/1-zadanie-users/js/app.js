@@ -31,3 +31,14 @@ console.log(women);
 
 // Zadanie 4
 // Wypisz tablicę użytkowników którzy mają tag "dolor"
+const dolorTag = [];
+let j = 0;
+for(let user = 0; user < users.length; user++){
+  for(let tag = 0; tag < users[user].tags.length; tag++){
+    if(users[user].tags[tag] == "dolor"){
+      dolorTag[j] = users[user].name;
+      j++;
+    }
+  }
+}
+console.log(dolorTag);
