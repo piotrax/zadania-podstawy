@@ -63,4 +63,21 @@ adultTest();
 
 // Zadanie 6
 // Wypisz true/false w zależności od tego czy chociaż jeden z użytkowników jest pełnoletni
+function oneAdultTest(){
+  let a = 0;
+  for(let user of users){
+    if(user.age >= 18){
+      a++;
+    };
+  }
+  if(a > 0){
+    return true
+  }
+  else{
+    return false
+  }
+}
+oneAdultTest();
 
+// Zadanie 7
+// Wypisz nową tablicę zawierającą tylko imiona użytkowników które będą pisane dużymi literami
