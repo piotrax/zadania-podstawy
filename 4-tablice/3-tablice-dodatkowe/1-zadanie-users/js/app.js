@@ -42,3 +42,6 @@ for(let user = 0; user < users.length; user++){
   }
 }
 console.log(dolorTag);
+
+// Zadanie 5
+// Wypisz true/false w zależności od tego czy wszyscy użytkownicy są pełnoletni
