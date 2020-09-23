@@ -79,5 +79,18 @@ function oneAdultTest(){
 }
 oneAdultTest();
 
+function oneAdult(){
+ for(user of users) {
+   console.log(user);
+    if(user.age >= 18){
+      return true
+    }
+    else {
+      return false
+    }
+ }
+}
+oneAdult();
+
 // Zadanie 7
 // Wypisz nową tablicę zawierającą tylko imiona użytkowników które będą pisane dużymi literami
