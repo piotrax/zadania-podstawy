@@ -60,3 +60,16 @@ console.log(`powierzchnia wszystkich państw: ${area()} km2`);
 // Zadanie 6
 // Napisz ile wynosi średnia dzietności na świecie (fertility_rate) 
 // (uwaga - niektóre kraje nie mają danych - wtedy jest null)
+avgFertility = () => {
+  let fertility = 0;
+  let counter = 0;
+  for(country of countries){
+    if(country.fertility_rate != null){
+      fertility += country.fertility_rate;
+      counter++;
+    }
+  }
+  return (fertility/counter).toFixed(2);
+  console.log(x);
+}
+console.log(`średnia dzietność na świecie: ${avgFertility()}`);
