@@ -15,3 +15,14 @@ console.log(`razem ludność we wszystkich państwach: ${ludnosc}`);
 
 // Zadanie 2
 // Wypisz średnią ludność w państwach
+srednieZaludnienie = () => {
+  let ludnosc = 0;
+  for(country of countries){
+    ludnosc += country.population;
+  }
+  return Math.floor(ludnosc/countries.length);
+}
+console.log(srednieZaludnienie());
+
+//Zadanie 3
+// Wypisz ile jest państw, które mają dodatni wzrost
