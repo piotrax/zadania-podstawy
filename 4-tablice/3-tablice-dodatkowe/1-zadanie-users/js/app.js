@@ -103,3 +103,25 @@ for(user of users){
   i++;
 }
 console.log(arr);
+
+// Zadanie 8
+// Wypisz liczbę kobiet i liczbę mężczyzn. Wypisz tekst, która grupa jest liczniejsza (np. "kobiety wygrywają").
+let women = 0;
+let men = 0;
+let winners ="";
+for(user of users){
+  if(user.gender === "female"){
+    women++;
+  }
+  else{
+    men++;
+  }
+ }
+console.log(`ilość kobiet: ${women}\nilość mężczyzn: ${men}`);
+if(women > men){
+  winners = "kobiety";
+}
+else{
+  winners = "mężczyźni";
+}
+console.log(`${winners} zwyciężają!`);
