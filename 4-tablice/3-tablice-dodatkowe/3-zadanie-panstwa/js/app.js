@@ -13,8 +13,8 @@ for(country of countries){
 console.groupEnd();
 console.log(`razem ludność we wszystkich państwach: ${ludnosc}`);
 
-// Zadanie 2
-// Wypisz średnią ludność w państwach
+//Zadanie 2
+//Wypisz średnią ludność w państwach
 srednieZaludnienie = () => {
   let ludnosc = 0;
   for(country of countries){
@@ -22,7 +22,15 @@ srednieZaludnienie = () => {
   }
   return Math.floor(ludnosc/countries.length);
 }
-console.log(srednieZaludnienie());
+console.log(`Srednie zaludnienie: ${srednieZaludnienie()}`);
 
 //Zadanie 3
 // Wypisz ile jest państw, które mają dodatni wzrost
+growPlus = () => {
+  let plus = 0;
+  for(country of countries){
+    if(country.grow > 0) plus++;
+  }
+  return plus;
+}
+console.log(`ilość państw z dodatnim przyrostem naturalnym: ${growPlus()}`);
