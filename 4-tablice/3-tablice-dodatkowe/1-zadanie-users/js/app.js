@@ -94,3 +94,12 @@ oneAdult();
 
 // Zadanie 7
 // Wypisz nową tablicę zawierającą tylko imiona użytkowników które będą pisane dużymi literami
+let text = [];
+let i = 0;
+let arr = [];
+for(user of users){
+  text = user.name.split(" ");
+  arr[i] = text[0].toUpperCase();
+  i++;
+}
+console.log(arr);
