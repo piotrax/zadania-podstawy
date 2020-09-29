@@ -81,7 +81,7 @@ oneAdultTest();
 
 function oneAdult(){
  for(user of users) {
-   console.log(user);
+   //console.log(user);
     if(user.age >= 18){
       return true
     }
