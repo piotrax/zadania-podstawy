@@ -34,3 +34,29 @@ growPlus = () => {
   return plus;
 }
 console.log(`ilość państw z dodatnim przyrostem naturalnym: ${growPlus()}`);
+
+// Zadanie 4
+// Wypisz ile jest państw, które mają ujemny wzrost
+growMinus = () => {
+  let minus = 0;
+  for(country of countries){
+    if(country.grow < 0) minus++;
+  }
+  return minus;
+}
+console.log(`ilość państw z ujemnym przyrostem naturalnym: ${growMinus()}`);
+
+//Zadanie 5
+//Napisz ile wszystkie państwa zajmują procent powierzchni Ziemi (world_area)
+area = () => {
+  let pow = 0;
+  for(country of countries){
+    pow += country.land_area_in_km;
+  }
+  return pow;
+}
+console.log(`powierzchnia wszystkich państw: ${area()} km2`);
+
+// Zadanie 6
+// Napisz ile wynosi średnia dzietności na świecie (fertility_rate) 
+// (uwaga - niektóre kraje nie mają danych - wtedy jest null)
