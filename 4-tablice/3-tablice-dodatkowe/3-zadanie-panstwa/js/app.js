@@ -70,6 +70,8 @@ avgFertility = () => {
     }
   }
   return (fertility/counter).toFixed(2);
-  console.log(x);
 }
 console.log(`średnia dzietność na świecie: ${avgFertility()}`);
+
+// Zadanie 7
+// Napisz ile wynosi średnia wieku na świecie
