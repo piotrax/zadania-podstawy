@@ -96,3 +96,10 @@ for(const info in countries[36]){
 
 // Zadanie 9
 // Napisz czy średnia wieku w Polsce jest większa od średniej na Świecie?
+let difference = avgAge() - countries[36].medium_age;
+if (difference < 0){
+  console.info(`średnia wieku w Polsce jest wyższa od średniej światowej o ${difference.toFixed(2)} lat`);
+}
+else{
+  console.info(`średnia wieku w Polsce jest niższa od średniej światowej o ${difference.toFixed(2)} lat`);
+}
