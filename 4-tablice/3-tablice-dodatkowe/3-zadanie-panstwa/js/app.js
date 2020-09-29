@@ -75,3 +75,18 @@ console.log(`średnia dzietność na świecie: ${avgFertility()}`);
 
 // Zadanie 7
 // Napisz ile wynosi średnia wieku na świecie
+avgAge = () => {
+  let age = 0;
+  let counter = 0;
+  for(country of countries){
+    if(country.medium_age != null){
+      age += country.medium_age;
+      counter++;
+    }
+  }
+  return (age/counter).toFixed(2);
+}
+console.log(`średnia wieku na świecie: ${avgAge()}`);
+
+// Zadanie 8
+// Wypisz wszystkie dane na temat Polski
