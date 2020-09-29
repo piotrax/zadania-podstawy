@@ -90,3 +90,9 @@ console.log(`średnia wieku na świecie: ${avgAge()}`);
 
 // Zadanie 8
 // Wypisz wszystkie dane na temat Polski
+for(const info in countries[36]){
+  console.log(`${info} : ${countries[36][info]}`);
+}
+
+// Zadanie 9
+// Napisz czy średnia wieku w Polsce jest większa od średniej na Świecie?
