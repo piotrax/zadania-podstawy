@@ -4,14 +4,13 @@
    i console.groupEnd();, albo po kodzie zastosuj console.clear() 
    Wypisz ile jest razem ludności we wszystkich państwach
 */
-let ludnosc = 0;
-console.groupCollapsed("Nazwy państw");
-for(country of countries){
-  console.log(country.name);
-  ludnosc += country.population;
-}
-console.groupEnd();
-console.log(`razem ludność we wszystkich państwach: ${ludnosc}`);
+let nazwyPanstw = countries.map(el =>{
+  return el.name});
+console.log(nazwyPanstw);
+let ludnosc = countries.reduce(function(prev, curr){
+  return prev + curr.population;
+}, 0);
+console.log(`ilość ludności na świecie: ${ludnosc}`);
 
 //Zadanie 2
 //Wypisz średnią ludność w państwach
