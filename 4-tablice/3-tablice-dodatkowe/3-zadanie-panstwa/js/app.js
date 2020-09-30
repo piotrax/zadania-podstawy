@@ -26,25 +26,13 @@ console.log(`Srednie zaludnienie: ${srednieZaludnienie()}`);
 
 //Zadanie 3
 // Wypisz ile jest państw, które mają dodatni wzrost
-growPlus = () => {
-  let plus = 0;
-  for(country of countries){
-    if(country.grow > 0) plus++;
-  }
-  return plus;
-}
-console.log(`ilość państw z dodatnim przyrostem naturalnym: ${growPlus()}`);
+growPlus = countries.filter(country => country.grow > 0).length;
+console.log(`ilość państw z dodatnim przyrostem naturalnym: ${growPlus}`);
 
 // Zadanie 4
 // Wypisz ile jest państw, które mają ujemny wzrost
-growMinus = () => {
-  let minus = 0;
-  for(country of countries){
-    if(country.grow < 0) minus++;
-  }
-  return minus;
-}
-console.log(`ilość państw z ujemnym przyrostem naturalnym: ${growMinus()}`);
+let growMinus = countries.filter(country => country.grow < 0).length;
+console.log(`ilość państw z ujemnym przyrostem naturalnym: ${growMinus}`);
 
 //Zadanie 5
 //Napisz ile wszystkie państwa zajmują procent powierzchni Ziemi (world_area)
