@@ -26,24 +26,20 @@ console.log(`Srednie zaludnienie: ${srednieZaludnienie()}`);
 
 //Zadanie 3
 // Wypisz ile jest państw, które mają dodatni wzrost
-growPlus = countries.filter(country => country.grow > 0).length;
+growPlus = countries.filter(el => el.grow > 0).length;
 console.log(`ilość państw z dodatnim przyrostem naturalnym: ${growPlus}`);
 
 // Zadanie 4
 // Wypisz ile jest państw, które mają ujemny wzrost
-let growMinus = countries.filter(country => country.grow < 0).length;
+let growMinus = countries.filter(el => el.grow < 0).length;
 console.log(`ilość państw z ujemnym przyrostem naturalnym: ${growMinus}`);
 
 //Zadanie 5
 //Napisz ile wszystkie państwa zajmują procent powierzchni Ziemi (world_area)
-area = () => {
-  let pow = 0;
-  for(country of countries){
-    pow += country.land_area_in_km;
-  }
-  return pow;
-}
-console.log(`powierzchnia wszystkich państw: ${area()} km2`);
+let area = countries.reduce(function(prev, curr) {
+  return prev + curr.land_area_in_km;
+}, 0);
+console.log(`wszystkie państwa zajmują: ${(area/510e6*100).toFixed(2)} procent powierzchni Ziemi`);
 
 // Zadanie 6
 // Napisz ile wynosi średnia dzietności na świecie (fertility_rate) 
