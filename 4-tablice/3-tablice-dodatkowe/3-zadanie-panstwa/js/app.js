@@ -47,18 +47,13 @@ console.log(`średnia dzietność na świecie: ${(dzietnosc/countriesWithFertili
 
 // Zadanie 7
 // Napisz ile wynosi średnia wieku na świecie
-avgAge = () => {
-  let age = 0;
-  let counter = 0;
-  for(country of countries){
-    if(country.medium_age != null){
-      age += country.medium_age;
-      counter++;
-    }
-  }
-  return (age/counter).toFixed(2);
-}
-console.log(`średnia wieku na świecie: ${avgAge()}`);
+const ageTab = countries.filter(function(el){
+  return el.medium_age != null;
+});
+let sumaWieku = ageTab.reduce(function(prev, curr){
+  return prev + parseInt(curr.medium_age);
+}, 0);
+console.log(`średnia wieku na świecie: ${(sumaWieku/ageTab.length).toFixed(2)}`);
 
 // Zadanie 8
 // Wypisz wszystkie dane na temat Polski
