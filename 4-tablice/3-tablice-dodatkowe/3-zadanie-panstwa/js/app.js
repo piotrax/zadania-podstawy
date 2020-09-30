@@ -22,7 +22,7 @@ console.log(`Srednie zaludnienie: ${Math.floor(zaludnienie/countries.length)}`);
 
 //Zadanie 3
 // Wypisz ile jest państw, które mają dodatni wzrost
-growPlus = countries.filter(el => el.grow > 0).length;
+let growPlus = countries.filter(el => el.grow > 0).length;
 console.log(`ilość państw z dodatnim przyrostem naturalnym: ${growPlus}`);
 
 // Zadanie 4
@@ -40,18 +40,11 @@ console.log(`wszystkie państwa zajmują: ${(area/510e6*100).toFixed(2)} procent
 // Zadanie 6
 // Napisz ile wynosi średnia dzietności na świecie (fertility_rate) 
 // (uwaga - niektóre kraje nie mają danych - wtedy jest null)
-avgFertility = () => {
-  let fertility = 0;
-  let counter = 0;
-  for(country of countries){
-    if(country.fertility_rate != null){
-      fertility += country.fertility_rate;
-      counter++;
-    }
-  }
-  return (fertility/counter).toFixed(2);
-}
-console.log(`średnia dzietność na świecie: ${avgFertility()}`);
+const countriesWithFertility = countries.filter(el => el.fertility_rate != null);
+let dzietnosc = countriesWithFertility.reduce(function(prev, curr){
+  return prev + curr.fertility_rate;
+}, 0);
+console.log(`średnia dzietność na świecie: ${(dzietnosc/countriesWithFertility.length).toFixed(2)}`);
 
 // Zadanie 7
 // Napisz ile wynosi średnia wieku na świecie
