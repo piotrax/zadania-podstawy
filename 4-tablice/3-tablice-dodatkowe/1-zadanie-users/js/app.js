@@ -8,15 +8,10 @@ console.log(tab1);
 
 // Zadanie 2
 // Wypisz tablicę z wszystkimi użytkownikami pełnoletnimi
-const adults = [];
-let i = 0;
-for(let user of users){
-  if(user.age >= 18){
-    adults[i] = user.name;
-    i++;
-  };
-}
-console.log(adults);
+const tab2 = users.filter( el => {
+  return el.age >= 18;
+})
+console.log(tab2.name);
 
 // Zadanie 3
 // Wypisz tablicę z wszystkimi kobietami
