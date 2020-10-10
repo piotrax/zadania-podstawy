@@ -22,17 +22,10 @@ console.log(tab3);
 
 // Zadanie 4
 // Wypisz tablicę użytkowników którzy mają tag "dolor"
-const dolorTag = [];
-let j = 0;
-for(let user = 0; user < users.length; user++){
-  for(let tag = 0; tag < users[user].tags.length; tag++){
-    if(users[user].tags[tag] == "dolor"){
-      dolorTag[j] = users[user].name;
-      j++;
-    }
-  }
-}
-console.log(dolorTag);
+const tab4 = users.filter(el =>{
+  return el.tags.includes("dolor");
+});
+console.log(tab4);
 
 // Zadanie 5
 // Wypisz true/false w zależności od tego czy wszyscy użytkownicy są pełnoletni
