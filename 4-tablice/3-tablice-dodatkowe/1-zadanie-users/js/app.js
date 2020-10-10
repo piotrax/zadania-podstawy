@@ -36,27 +36,17 @@ console.log(dolorTag);
 
 // Zadanie 5
 // Wypisz true/false w zależności od tego czy wszyscy użytkownicy są pełnoletni
-const tab5 = users.filter(el => {
+const tab5 = users.every(el => {
       return el.age >= 18;
 });
-if(tab5.length == users.length){
-  console.log(true)
-}
-else{
-  console.log(false)
-}
+console.log(tab5);
 
 // Zadanie 6
 // Wypisz true/false w zależności od tego czy chociaż jeden z użytkowników jest pełnoletni
-const tab6 = users.filter(el => {
+const tab6 = users.some(el => {
       return el.age >= 18;
 });
-if(tab6.length > 0){
-  console.log(true)
-}
-else{
-  console.log(false)
-}
+console.log(tab6);
 
 
 // Zadanie 7
