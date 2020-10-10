@@ -54,34 +54,16 @@ adultTest();
 
 // Zadanie 6
 // Wypisz true/false w zależności od tego czy chociaż jeden z użytkowników jest pełnoletni
-function oneAdultTest(){
-  let a = 0;
-  for(let user of users){
-    if(user.age >= 18){
-      a++;
-    };
-  }
-  if(a > 0){
-    return true
-  }
-  else{
-    return false
-  }
+const tab6 = users.map(el => {
+      return el.age >= 18;
+});
+if(tab6.length > 0){
+  console.log(true)
 }
-oneAdultTest();
+else{
+  console.log(false)
+}
 
-function oneAdult(){
- for(user of users) {
-   //console.log(user);
-    if(user.age >= 18){
-      return true
-    }
-    else {
-      return false
-    }
- }
-}
-oneAdult();
 
 // Zadanie 7
 // Wypisz nową tablicę zawierającą tylko imiona użytkowników które będą pisane dużymi literami
@@ -92,18 +74,14 @@ console.log(tab7);
 
 // Zadanie 8
 // Wypisz liczbę kobiet i liczbę mężczyzn. Wypisz tekst, która grupa jest liczniejsza (np. "kobiety wygrywają").
-let women = 0;
-let men = 0;
-let winners ="";
-for(user of users){
-  if(user.gender === "female"){
-    women++;
-  }
-  else{
-    men++;
-  }
- }
-console.log(`ilość kobiet: ${women}\nilość mężczyzn: ${men}`);
+const women  = users.filter(el => {
+  return el.gender == "female";
+});
+console.log(`Ilość kobiet: ${women.length}`);
+const men  = users.filter(el => {
+  return el.gender == "male";
+});
+console.log(`Ilość mężczyzn: ${men.length}`);
 if(women > men){
   winners = "kobiety";
 }
