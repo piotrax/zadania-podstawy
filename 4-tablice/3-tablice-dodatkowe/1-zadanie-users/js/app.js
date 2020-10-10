@@ -11,19 +11,14 @@ console.log(tab1);
 const tab2 = users.filter( el => {
   return el.age >= 18;
 })
-console.log(tab2.name);
+console.log(tab2);
 
 // Zadanie 3
 // Wypisz tablicę z wszystkimi kobietami
-const women = [];
-let i = 0;
-for(let user of users){
-  if(user.gender === "female"){
-    women[i] = user.name;
-    i++;
-  };
-}
-console.log(women);
+const tab3 = users.filter( el => {
+  return el.gender == "female";
+})
+console.log(tab3);
 
 // Zadanie 4
 // Wypisz tablicę użytkowników którzy mają tag "dolor"
@@ -90,15 +85,10 @@ oneAdult();
 
 // Zadanie 7
 // Wypisz nową tablicę zawierającą tylko imiona użytkowników które będą pisane dużymi literami
-let text = [];
-let i = 0;
-let arr = [];
-for(user of users){
-  text = user.name.split(" ");
-  arr[i] = text[0].toUpperCase();
-  i++;
-}
-console.log(arr);
+const tab7 = users.map(el => {
+    return el.name.split(" ")[0].toUpperCase();
+});
+console.log(tab7);
 
 // Zadanie 8
 // Wypisz liczbę kobiet i liczbę mężczyzn. Wypisz tekst, która grupa jest liczniejsza (np. "kobiety wygrywają").
